@@ -1,0 +1,43 @@
+swagger: '2.0'
+info:
+  title: hello
+  version: '1.0'
+  description: Hello World
+host: 'localhost:3000'
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /hello:
+    get:
+      summary: say hello world
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+      operationId: get-hello
+    post:
+      summary: say hello to someone
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+      operationId: post-hello
+      description: ''
+      parameters:
+        - type: string
+          in: query
+          name: name
